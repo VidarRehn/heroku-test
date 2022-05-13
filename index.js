@@ -2,8 +2,18 @@ const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
 require('dotenv').config()
+const peopleRoute = require('./routes/people')
 
 const PORT = process.env.PORT || 3000
+
+//middlewares
+
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
+
+// routes
+
+app.use('/api/people', peopleRoute)
 
 
 // connect to mongoDB Atlas
