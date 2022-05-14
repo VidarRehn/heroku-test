@@ -15,6 +15,12 @@ app.use(express.urlencoded({extended: true}))
 
 app.use('/api/people', peopleRoute)
 
+//frontend
+
+app.get('/home', (req, res) => {
+    res.render('home')
+})
+
 
 // connect to mongoDB Atlas
 
