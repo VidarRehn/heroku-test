@@ -22,8 +22,6 @@ mongoose
 .connect(process.env.MONGO_URL, {useNewUrlParser: true})
     .then(() => {
     console.log('Connected to MongoDB Atlas')
-}).catch(error => {
-    console.log('Something went wrong', error)
 })
 
 
