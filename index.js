@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const app = express()
 require('dotenv').config()
 const peopleRoute = require('./routes/people')
+const frontend = require('./public/index.html')
 
 const PORT = process.env.PORT || 3000
 
@@ -17,9 +18,7 @@ app.use('/api/people', peopleRoute)
 
 //frontend
 
-app.get('/home', (req, res) => {
-    res.render('home')
-})
+app.use('/home', frontend)
 
 
 // connect to mongoDB Atlas
