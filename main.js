@@ -27,6 +27,7 @@ const addNewPerson = async () => {
     })
 }
 
-myForm.addEventListener('submit', () => {
+myForm.addEventListener('submit', (e) => {
+    e.preventDefault()
     addNewPerson()
 })
