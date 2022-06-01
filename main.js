@@ -13,19 +13,19 @@ const ageInput = document.querySelector('#age')
 const myForm = document.querySelector('#my-form')
 
 
-// const addNewPerson = async () => {
-//     await fetch('https://murmuring-castle-51611.herokuapp.com/api/people', {
-//         method: 'post',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify({
-//             firstName: firstNameInput.value,
-//             lastName: lastNameInput.value,
-//             age: ageInput.value
-//         })
-//     })
-// }
+const addNewPerson = async () => {
+    await fetch('https://murmuring-castle-51611.herokuapp.com/api/people', {
+        method: 'post',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            firstName: firstNameInput.value,
+            lastName: lastNameInput.value,
+            age: ageInput.value
+        })
+    })
+}
 
 myForm.addEventListener('submit', (e) => {
     e.preventDefault()
